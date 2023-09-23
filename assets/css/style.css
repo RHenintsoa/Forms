@@ -1,0 +1,15 @@
+body{
+	background-color: antiquewhite;
+}
+.navbar{
+	background-color: rgb(129, 111, 99);
+	color: aliceblue;
+}
+.content{
+	background-color: black;
+	margin-top: 5%;
+	padding: 2%;
+}
+#picture{
+	border-radius: 1%;
+}
