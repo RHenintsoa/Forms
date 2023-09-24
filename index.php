@@ -12,21 +12,13 @@
 	<!-- bootstrap icons files-->
 	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/bootstrap-icons/bootstrap-icons.css">
 
-	<title>Inscription</title>
+	<title>The best</title>
 </head>
 
 <body>
-	<header>
-
-		<nav class="navbar navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-brand">
-					<span>Welcome</span>
-				</div>
-			</div>
-
-		</nav>
-	</header>
+	<!--header-->
+	<?php include('header.php') ?>
+	<!--end header-->
 	<div class="container content">
 		<div class="row">
 			<div class="col-lg-6 offset-lg-4">
@@ -75,7 +67,8 @@
 							</div>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-info"> VALIDER</button>
+						
+						<a href="list.php" type="submit"class="btn btn-info"> VALIDER</a>
 					</div>
 
 				</form>
