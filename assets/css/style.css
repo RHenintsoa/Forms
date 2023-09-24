@@ -6,10 +6,18 @@ body{
 	color: aliceblue;
 }
 .content{
-	background-color: black;
+	background-color:rgba(211, 211, 211, 0.928);
 	margin-top: 5%;
 	padding: 2%;
+	border-radius: 5px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
+.form-control{
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+/* #form{
+	background-color: aqua;
+} */
 #picture{
 	border-radius: 1%;
 }
