@@ -16,7 +16,44 @@
 </head>
 
 <body>
+	<!--header-->
 	<?php include('header.php') ?>
+	<!--end header-->
+	<div class="container content">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2> Vos informations</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-xs-12 offset-lg-2 offset-md-2">
+				<table class="table table-striped">
+					<tbody>
+						<tr>
+							<td>Nom :</td>
+							<td> à compélter</td>
+						</tr>
+						<tr>
+							<td>Prénom :</td>
+							<td> à compélter</td>
+						</tr>
+						<tr>
+							<td>Date de naissance :</td>
+							<td> à compélter</td>
+						</tr>
+						<tr>
+							<td>Ville actuelle :</td>
+							<td> à compélter</td>
+						</tr>
+						<tr>
+							<td>Sexe :</td>
+							<td> à compélter</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 
 	
 <!-- script-->
