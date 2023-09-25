@@ -1,19 +1,4 @@
- <?php
-//  && (!empty($_POST['name'])) && (!empty($_POST['firstname'])) (!empty($_POST['birth'])) && (!empty($_POST['town'])) && (!empty($_POST['gender']))
-	if (isset($_POST["btn_submit"])){
-		$person =[
-			"name" => $_POST["name"],
-			"firstname" => $_POST["firstname"],
-			"birth" => $_POST["birth"],
-			"town" => $_POST["town"],
-			"gender" => $_POST["gender"]
-		];
-	}
-	// else{ 
-	// 	echo '<script>alert("Veuillez remplir tous les champs")</script>';
-	// }
-	
-?> 
+
 <!DOCTYPE html>
 <html>
 

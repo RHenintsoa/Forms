@@ -1,4 +1,14 @@
-<?php require('index.php') ?>
+<?php 
+		if (isset($_POST["btn_submit"])){
+			$person =[
+				"name" => $_POST["name"],
+				"firstname" => $_POST["firstname"],
+				"birth" => $_POST["birth"],
+				"town" => $_POST["town"],
+				"gender" => $_POST["gender"]
+			];
+		}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -32,11 +42,11 @@
 					<tbody>
 						<tr>
 							<td>Nom :</td>
-							<td> <?php echo $person["name"] ?> </td>
+							<td> <?= isset($_POST['name'])?$_POST['name']:"" ?> </td>
 						</tr>
 						<tr>
 							<td>Prénom :</td>
-							<td> <?php echo $person["firstname"] ?> </td>
+							<td> <?=  $_POST["firstname"]??"" ?> </td>
 						</tr>
 						<tr>
 							<td>Date de naissance :</td>
