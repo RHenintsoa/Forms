@@ -1,3 +1,4 @@
+<?php require('index.php') ?>
 <!DOCTYPE html>
 <html>
 
@@ -31,23 +32,23 @@
 					<tbody>
 						<tr>
 							<td>Nom :</td>
-							<td> à compélter</td>
+							<td> <?php echo $person["name"] ?> </td>
 						</tr>
 						<tr>
 							<td>Prénom :</td>
-							<td> à compélter</td>
+							<td> <?php echo $person["firstname"] ?> </td>
 						</tr>
 						<tr>
 							<td>Date de naissance :</td>
-							<td> à compélter</td>
+							<td> <?php echo $person["birth"] ?></td>
 						</tr>
 						<tr>
 							<td>Ville actuelle :</td>
-							<td> à compélter</td>
+							<td> <?php echo $person["town"] ?> </td>
 						</tr>
 						<tr>
 							<td>Sexe :</td>
-							<td> à compélter</td>
+							<td> <?php echo $person["gender"] ?> </td>
 						</tr>
 					</tbody>
 				</table>

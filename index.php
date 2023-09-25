@@ -1,3 +1,19 @@
+ <?php
+//  && (!empty($_POST['name'])) && (!empty($_POST['firstname'])) (!empty($_POST['birth'])) && (!empty($_POST['town'])) && (!empty($_POST['gender']))
+	if (isset($_POST["btn_submit"])){
+		$person =[
+			"name" => $_POST["name"],
+			"firstname" => $_POST["firstname"],
+			"birth" => $_POST["birth"],
+			"town" => $_POST["town"],
+			"gender" => $_POST["gender"]
+		];
+	}
+	// else{ 
+	// 	echo '<script>alert("Veuillez remplir tous les champs")</script>';
+	// }
+	
+?> 
 <!DOCTYPE html>
 <html>
 
@@ -34,19 +50,19 @@
 				<form action="./list.php" method="POST">
 					<div class="form-group">
 						<label for="inputName">Nom : </label>
-						<input type="text"id="inputName" class="form-control">
+						<input type="text"id="inputName" name="name" class="form-control">
 					</div>	
 					<div class="form-group">
 						<label for="inputFirstname"> Prénom : </label>
-						<input type="text"id="inputFirstname" class="form-control">
+						<input type="text"id="inputFirstname" name="firstname" class="form-control">
 					</div>
 					<div class="form-group">
 						<label for="inputBirth"> Date de naissance : </label>
-						<input type="date"id="inputBirth" class="form-control">
+						<input type="date"id="inputBirth" name="birth" class="form-control">
 					</div>
 					<div class="form-group">
 						<label for="inputTown"> Votre ville actuelle : </label>
-							<select name ="profession" id="inputTown" class="form-control"> 
+							<select id="inputTown" name= "town" class="form-control"> 
 								<option value=""></option>
 								<option value="Antananarivo">Antananarivo</option>
 								<option value="Mahajanga">Mahajanga</option>
@@ -58,17 +74,19 @@
 					<div class="form-group">
 						<p> Veuillez indiquer votre sexe</p>
 							<div class="form-check">
-								<input type="radio" id="choiceFemale" name="female" class="form-check-input">
+								<input type="radio" id="choiceFemale" name="gender" value="Femme" class="form-check-input">
 								<label for="choiceFemale">Femme</label>
 							</div>
 							<div class="form-check">
-								<input type="radio" id="choiceMale" name="male" class="form-check-input">
+								<input type="radio" id="choiceMale" name="gender" value="Homme" class="form-check-input">
 								<label for="choiceMale">Homme</label>
 							</div>
 					</div>
 					<div class="form-group">
 						
-						<a href="list.php" type="submit"class="btn btn-info"> VALIDER</a>
+						<!-- <a href="list.php" type="submit"class="btn btn-info" name="btn_submit"> VALIDER</a> -->
+						<input type="submit" class="btn btn-info" name="btn_submit" value="VALIDER">
+
 					</div>
 
 				</form>
