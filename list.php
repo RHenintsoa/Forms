@@ -7,6 +7,14 @@
 				"town" => $_POST["town"],
 				"gender" => $_POST["gender"]
 			];
+			
+			$user_input = "Café"; // Remplacez ceci par la donnée entrée par l'utilisateur
+
+			if (preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $user_input)) {
+				echo "La chaîne ne contient que des lettres alphabétiques (y compris les lettres avec des accents).";
+			} else {
+				echo "La chaîne contient des caractères non alphabétiques.";
+			}
 		}
 ?>
 <!DOCTYPE html>
@@ -50,15 +58,15 @@
 						</tr>
 						<tr>
 							<td>Date de naissance :</td>
-							<td> <?php echo $person["birth"] ?></td>
+							<td> <?=  $_POST["birth"]??"" ?> </td>
 						</tr>
 						<tr>
 							<td>Ville actuelle :</td>
-							<td> <?php echo $person["town"] ?> </td>
+							<td> <?= isset($_POST['town'])? $_POST['name']:""?> </td>
 						</tr>
 						<tr>
 							<td>Sexe :</td>
-							<td> <?php echo $person["gender"] ?> </td>
+							<td> <?= isset($_POST['gender'])? $_POST['gender'] :""?> </td>
 						</tr>
 					</tbody>
 				</table>
