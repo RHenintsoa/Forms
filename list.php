@@ -8,13 +8,13 @@
 				"gender" => $_POST["gender"]
 			];
 			
-			$user_input = "Café"; // Remplacez ceci par la donnée entrée par l'utilisateur
-
-			if (preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $user_input)) {
-				echo "La chaîne ne contient que des lettres alphabétiques (y compris les lettres avec des accents).";
+			$name = $person['name'];
+			if (preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name)) {
+				echo $name;
 			} else {
-				echo "La chaîne contient des caractères non alphabétiques.";
+				echo "Le nom ne doit pas contenir des caractères spéciaux tels * - / !";
 			}
+			die();
 		}
 ?>
 <!DOCTYPE html>
