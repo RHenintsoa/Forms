@@ -47,7 +47,7 @@
 					</div>
 					<div class="form-group">
 						<label for="inputTown"> Votre ville actuelle : </label>
-							<select id="inputTown" name= "town" class="form-control"> 
+							<select id="inputTown" name= "town" class="form-control" > 
 								<option value=""></option>
 								<option value="Antananarivo">Antananarivo</option>
 								<option value="Mahajanga">Mahajanga</option>

@@ -7,12 +7,22 @@
 				"town" => $_POST["town"],
 				"gender" => $_POST["gender"]
 			];
-			
+			//Vérification nom et prénom
 			$name = $person['name'];
-			if (preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name)) {
+			$firstname = $person['firstname'];
+			if (preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $firstname)) {
 				echo $name;
 			} else {
 				echo "Le nom ne doit pas contenir des caractères spéciaux tels * - / !";
+				die();
+			}
+			//Vérification date de naissance
+			$birth = $person['birth'];
+			if (strtotime($birth) == true){
+				echo $birth;
+			}
+			else{
+				echo "entrer une date valide";
 			}
 			die();
 		}
