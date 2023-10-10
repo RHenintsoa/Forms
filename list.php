@@ -8,25 +8,19 @@
 				"gender" => $_POST["gender"]
 			];
 			$error ="";
-			//Vérification nom et prénom
-			$name = $person['name'];
-			$firstname = $person['firstname'];
-			if (!empty($name) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name) && !empty($firstname) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $firstname)) {
-				echo $name;
-			} else {
-				echo "Le nom ne doit pas contenir des caractères spéciaux tels * - / !";
-				die();
-			}
-			//Vérification date de naissance
-			$birth = $person['birth'];
-			if (!empty($birth) && strtotime($birth) == true){
-				echo $birth;
-			}
-			else{
-				echo "entrer une date valide";
-			}
-			die();
-		}
+?>
+
+<?php 
+		// 	//Vérification date de naissance
+		// 	$birth = $person['birth'];
+		// 	if (!empty($birth) && strtotime($birth) == true){
+		// 		echo $birth;
+		// 	}
+		// 	else{
+		// 		echo "entrer une date valide";
+		// 	}
+		// 	die();
+		// }
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,19 +55,35 @@
 					<tbody>
 						<tr>
 							<td>Nom :</td>
+								<?php		
+									//Vérification nom et prénom
+									$name = $person['name'];
+									$firstname = $person['firstname'];
+										if (!empty($name) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name) && !empty($firstname) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $firstname)) {
+								?>	
 							<td> <?= isset($_POST['name'])?$_POST['name']:"" ?> </td>
-						</tr>
 						<tr>
 							<td>Prénom :</td>
 							<td> <?=  $_POST["firstname"]??"" ?> </td>
 						</tr>
+								<?php
+								
+										} else {
+												echo "Le nom ne doit pas contenir des caractères spéciaux tels * - / !";
+												die();
+											}
+										}
+								?>
+							
+						</tr>
+						<tr>
 						<tr>
 							<td>Date de naissance :</td>
 							<td> <?=  $_POST["birth"]??"" ?> </td>
 						</tr>
 						<tr>
 							<td>Ville actuelle :</td>
-							<td> <?= isset($_POST['town'])? $_POST['name']:""?> </td>
+							<td> <?= isset($_POST['town'])? $_POST['town']:""?> </td>
 						</tr>
 						<tr>
 							<td>Sexe :</td>
