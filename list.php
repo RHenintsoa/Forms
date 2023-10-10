@@ -7,6 +7,7 @@
 				"town" => $_POST["town"],
 				"gender" => $_POST["gender"]
 			];
+			$error ="";
 			//Vérification nom et prénom
 			$name = $person['name'];
 			$firstname = $person['firstname'];

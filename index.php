@@ -36,14 +36,26 @@
 					<div class="form-group">
 						<label for="inputName">Nom : </label>
 						<input type="text"id="inputName" name="name" class="form-control">
+						<div class="alert alert-warning alert-dismissible fade show " style="display:none" role="alert">
+							<i class="bi bi-exclamation-triangle-fill"></i>
+							<span>Merci de remplir ces informations</span>
+						</div>
 					</div>	
 					<div class="form-group">
 						<label for="inputFirstname"> Prénom : </label>
 						<input type="text"id="inputFirstname" name="firstname" class="form-control">
+						<div class="alert alert-warning alert-dismissible fade show " style="display:none"  role="alert">
+							<i class="bi bi-exclamation-triangle-fill"></i>
+							<span>Merci de remplir ces informations</span>
+						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputBirth"> Date de naissance : </label>
 						<input type="date"id="inputBirth" name="birth" class="form-control">
+						<div class="alert alert-warning alert-dismissible fade show " style="display:none"  role="alert">
+							<i class="bi bi-exclamation-triangle-fill"></i>
+							<span>Merci de remplir ces informations</span>
+						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputTown"> Votre ville actuelle : </label>
@@ -55,6 +67,10 @@
 								<option value="Antsiranana">Antsiranana</option>
 								<option value="Fianarantsoa">Fianarantsoa</option>
 							</select>
+						<div class="alert alert-warning alert-dismissible fade show " style="display:none"  role="alert">
+							<i class="bi bi-exclamation-triangle-fill"></i>
+							<span>Veuillez choisir votre ville</span>
+						</div>
 					</div>
 					<div class="form-group">
 						<p> Veuillez indiquer votre sexe</p>
@@ -66,12 +82,14 @@
 								<input type="radio" id="choiceMale" name="gender" value="Homme" class="form-check-input">
 								<label for="choiceMale">Homme</label>
 							</div>
+							<div class="alert alert-warning alert-dismissible fade show " style="display:none"  role="alert">
+								<i class="bi bi-exclamation-triangle-fill"></i>
+								<span>Veuillez choisir une option</span>
+							</div>
 					</div>
-					<div class="form-group">
-						
-						<!-- <a href="list.php" type="submit"class="btn btn-info" name="btn_submit"> VALIDER</a> -->
-						<input type="submit" class="btn btn-info" name="btn_submit" value="VALIDER">
 
+					<div class="form-group">
+						<input type="submit" class="btn btn-info" name="btn_submit" value="VALIDER">
 					</div>
 
 				</form>
