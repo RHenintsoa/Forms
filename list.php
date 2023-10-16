@@ -1,4 +1,5 @@
 <?php 
+session_start();
 		if (isset($_POST["btn_submit"])){
 			$person =[
 				"name" => $_POST["name"],
@@ -8,20 +9,31 @@
 				"gender" => $_POST["gender"]
 			];
 			$error ="";
+												
+//Vérification nom et prénom
+	$name = $person['name'];
+	$firstname = $person['firstname'];
+	if (!empty($name) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name) && !empty($firstname) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $firstname)) {
+		echo $name;
+	}	 else {
+		 $error = " <script> alert('Le nom ne doit pas contenir des caractères spéciaux') </script>";
+		 echo $error;
+		die();
+	}	
+//Vérification date de naissance
+			$birth = $person['birth'];
+			if (!empty($birth) && strtotime($birth) == true){
+				echo $birth;
+			}
+			else{
+				$error = " <script> alert('entrer une date valide' ) </script>";
+				echo $error;
+				die();
+			}
+}					
 ?>
 
-<?php 
-		// 	//Vérification date de naissance
-		// 	$birth = $person['birth'];
-		// 	if (!empty($birth) && strtotime($birth) == true){
-		// 		echo $birth;
-		// 	}
-		// 	else{
-		// 		echo "entrer une date valide";
-		// 	}
-		// 	die();
-		// }
-?>
+
 <!DOCTYPE html>
 <html>
 
@@ -55,27 +67,11 @@
 					<tbody>
 						<tr>
 							<td>Nom :</td>
-								<?php		
-									//Vérification nom et prénom
-									$name = $person['name'];
-									$firstname = $person['firstname'];
-										if (!empty($name) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $name) && !empty($firstname) && preg_match('/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/', $firstname)) {
-								?>	
+	
 							<td> <?= isset($_POST['name'])?$_POST['name']:"" ?> </td>
 						<tr>
 							<td>Prénom :</td>
 							<td> <?=  $_POST["firstname"]??"" ?> </td>
-						</tr>
-								<?php
-								
-										} else {
-												echo "Le nom ne doit pas contenir des caractères spéciaux tels * - / !";
-												die();
-											}
-										}
-								?>
-							
-						</tr>
 						<tr>
 						<tr>
 							<td>Date de naissance :</td>

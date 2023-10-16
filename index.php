@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -57,6 +59,23 @@
 							<span>Merci de remplir ces informations</span>
 						</div>
 					</div>
+					<div class="form-group">
+						<label for="inputAdress"> Contact : </label>
+						<input type="text" id="inputContact" name="contact" class="form-control">
+						<div class="alert alert-warning alert-dismissible fade show " style="display:none"  role="alert">
+							<i class="bi bi-exclamation-triangle-fill"></i>
+							<span>Merci de remplir ces informations</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputAdress"> Adresse : </label>
+						<input type="text" id="inputAdress" name="adress" class="form-control">
+						<div class="alert alert-warning alert-dismissible fade show " style="display:none"  role="alert">
+							<i class="bi bi-exclamation-triangle-fill"></i>
+							<span>Merci de remplir ces informations</span>
+						</div>
+					</div>
+
 					<div class="form-group">
 						<label for="inputTown"> Votre ville actuelle : </label>
 							<select id="inputTown" name= "town" class="form-control" > 
